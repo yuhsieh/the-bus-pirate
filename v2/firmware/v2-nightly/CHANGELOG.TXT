@@ -1,0 +1,3 @@
+Firmware v0h includes a new bootloader firmware (bootloader v2), but it isn't required. Bootloader V1 and v2 are completely compatible, v2 has cleaner code and (probably) doesn't require a power reset after an update. The bootloader can only be replaced by programming the firmware into the PIC through the ICSP header using an ICD2 or PICKIT2. If you can't do it, don't worry about it.
+
+See the project tracker on our google SVN page for a complete list of updates to Voh.
