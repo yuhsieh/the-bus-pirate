@@ -1,11 +1,5 @@
 #sidebar TOC
 
-<html>
-<head>
-<title>Bus Pirate 101 Tutorial</title>
-</head>
-
-<body>
 <h1>Bus Pirate 101 Tutorial</h1>
 
 <img src="http://wherelabs.files.wordpress.com/2009/07/bpv3-101.jpg?w=450&h=311" />
@@ -159,8 +153,4 @@ SPI&gt;</p>
 
 <p><strong>Part 2</strong></p>
 <p>Continue reading Bus Pirate 102.</p>
-
-
-</body>
-</html>
 
