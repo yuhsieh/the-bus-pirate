@@ -1,5 +1,6 @@
 * [Home Home]
  * [BusPirate101 Bus Pirate 101 tutorial]
+ * [BusPirate102 Bus Pirate 102 tutorial]
  * [ConnectingWithMAC Connecting with MAC OSX]
  * [http://whereisian.com/forum/index.php?board=4.0 Bus Pirate Forum]
  * [http://wiki.countercaster.com/The_Bus_Pirate_on_Linux:_From_/dev/ttyUSB?_to_/dev/bus_pirate Create /dev/bus_pirate on Linux]
