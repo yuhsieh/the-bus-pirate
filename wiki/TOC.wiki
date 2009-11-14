@@ -4,7 +4,7 @@
  * [ConnectingWithMAC Connecting with MAC OSX]
  * [http://whereisian.com/forum/index.php?board=4.0 Bus Pirate Forum]
 
-* [Guides Guides]
+* Guides
  * [GuideSelfTest Self-test guide]
  * [GuidePullupResistors Practical guide to pull-up resistors]
  * [GuideMixedVoltagePullupResistors Mixed voltage interfacing with pull-up resistors]
@@ -19,12 +19,14 @@
  * [GuideRepeatCommand Repeat command]
  * [GuideI2cSpiSniffer I2C, SPI sniffers]
  * [http://wiki.countercaster.com/The_Bus_Pirate_on_Linux:_From_/dev/ttyUSB?_to_/dev/bus_pirate Create /dev/bus_pirate on Linux]
-* [FirmwareUpgrade Firmware upgrades]
+ 
+* Firmware upgrades
  * [FirmwareUpgradeWindows Firmware upgrade guide for Windows]
  * [FirmwareUpgradePython Fimrware upgrade guide for Linux,OSX (Python)]
-* [Reference Reference]
+ 
+* Reference
  * [IOHeaderPinDescriptions I/O header pin descriptions]
- * [UserTerminalMode User Terminal Mode]
+ * User Terminal Mode
   * [Menus Menus]
   * [SyntaxMacros Syntax and macros]
   * [ChipDemo Chip Demonstrations]
