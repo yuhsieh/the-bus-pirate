@@ -21,12 +21,12 @@
 </ol>
 <p>Here's the output from a self-test:</p>
 
-<p style="padding-left:30px;">HiZ&gt;~ <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; self-test command</strong></span><br />
+<p style="padding-left:30px;">HiZ>~ <span style="text-decoration:underline;"><strong><<< self-test command</strong></span><br />
 Disconnect any devices.<br />
 Connect the Vpu pin to the +5V pin.<br />
 Connect the ADC pin to the +3.3V pin.<br />
 These results are experimental.<br />
-Press any key to continue. <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; follow the instructions to begin</strong></span><br />
+Press any key to continue. <span style="text-decoration:underline;"><strong><<< follow the instructions to begin</strong></span><br />
 
 Starting test.<br />
 Control pin test…<br />
@@ -58,7 +58,7 @@ CLK PIN OK<br />
 MISO PIN OK<br />
 CS PIN OK<br />
 
-HiZ&gt;</p>
+HiZ></p>
 <p>This Bus Pirate passed the self-test with no problems.</p>
 <p><strong>What does it do?</strong></p>
 <p>The self-test verifies that components connected to the PIC24FJ64GA002 respond as expected.</p>

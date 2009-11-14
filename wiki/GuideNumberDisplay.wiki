@@ -14,22 +14,22 @@
 
 <p style="padding-left:30px;">0b0, 0b11000, 0b1001010, 0b11111111</p>
 <p><a href="http://en.wikipedia.org/wiki/Binary_numeral_system">Binary</a> values are commonly used in electronics because the 1's and 0's correspond to register 'switches' that control various aspects of a device. Enter a binary number as 0b and then the bits. Padding 0's are not required, 0b00000001=0b1.</p>
-<p style="padding-left:30px;">HiZ&gt;=<br />
-CONVERT (1) &gt;0x45<br />
+<p style="padding-left:30px;">HiZ>=<br />
+CONVERT (1) >0x45<br />
 
 0x45<br />
 69<br />
 0b01000101<br />
-HiZ&gt;</p>
+HiZ></p>
 <p><a href="http://dangerousprototypes.com/2009/08/27/bus-pirate-hexdecbin-converter/">The = command</a> (firmware v2.1+) converts between number formats.</p>
-<p style="padding-left:30px;">HiZ&gt;o<br />
+<p style="padding-left:30px;">HiZ>o<br />
 1. HEX<br />
 
 2. DEC<br />
 3. BIN<br />
 4. RAW<br />
-(1) &gt;1<br />
+(1) >1<br />
 Display format set<br />
-HiZ&gt;</p>
+HiZ></p>
 <p>The Bus Pirate terminal will display values  in BIN/HEX/DEC. Change the setting in the data display format menu (o). The default display format is HEX.</p>
 <p>The RAW display mode sends values to the terminal as raw byte values without any text conversion. This is useful for bus sniffers and other high-speed functions where converting raw bytes to text takes too much time. Adjust the display format in your serial terminal to see the raw values as HEX/DEC/BIN.</p>

@@ -15,10 +15,10 @@
 
 </ul>
 <p>I2C start and stop bits are represented by the normal Bus Pirate syntax.</p>
-<p style="padding-left:30px;">I2C&gt;(2)<br />
+<p style="padding-left:30px;">I2C>(2)<br />
 I2C bus sniffer, press any key to exit<br />
 [0x40-][0x40-0x40-0x30-0x56-0x77-]<br />
-I2C&gt;</p>
+I2C></p>
 <p>Sniffed data values are always HEX formatted in user mode. Press any key to exit the sniffer.</p>
 <p>See <a href="http://dangerousprototypes.com/2009/10/14/bus-pirate-binary-i2c-mode/">here</a> for more about the I2C sniffer in I2C binary mode.</p>
 
@@ -31,12 +31,12 @@ I2C&gt;</p>
 
 </ul>
 <p>SPI CS pin transitions are represented by the normal Bus Pirate syntax. The byte sniffed on the MISO pin is displayed inside ().</p>
-<p style="padding-left:30px;">SPI&gt;(1)<br />
+<p style="padding-left:30px;">SPI>(1)<br />
 Sniff when:<br />
 1. CS low<br />
 2. CS high<br />
 3. All traffic<br />
-(1) &gt;<br />
+(1) ><br />
 SPI bus sniffer, any key exists<br />
 
 [0x30(0x00)0xff(0x12)0xff(0x50)][0x40(0x00)]</p>

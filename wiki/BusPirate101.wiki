@@ -83,10 +83,10 @@
 <p>Windows will request a driver the first time the Bus Pirate connects to a PC. Extract the latest <a href="http://www.ftdichip.com/Drivers/VCP.htm">virtual com port drivers from FTDI</a> into a folder and browse to them using the ‘Found New Hardware' wizard. Install guides and drivers for other systems are also available on the FTDI driver download page.</p>
 
 <p><img class="alignnone size-full wp-image-62" title="com-port" src="http://wherelabs.files.wordpress.com/2009/07/com-port.png?w=287&#038;h=91" alt="com-port" width="287" height="91" /></p>
-<p>To find the COM port number assigned to the Bus Pirate go to the Windows device manager (<em>Start-&gt;Settings-&gt;Control panel-&gt;System-&gt;Hardware-&gt;Device manager</em>). Look in ‘Ports (COM &amp; LPT)'  for ‘USB Serial Port', ours is COM5.</p>
+<p>To find the COM port number assigned to the Bus Pirate go to the Windows device manager (<em>Start->Settings->Control panel->System->Hardware->Device manager</em>). Look in ‘Ports (COM &amp; LPT)'  for ‘USB Serial Port', ours is COM5.</p>
 <p><img class="alignnone size-full wp-image-64" title="com-port-change.ii" src="http://wherelabs.files.wordpress.com/2009/07/com-port-change-ii.png?w=422&#038;h=150" alt="com-port-change.ii" width="422" height="150" /></p>
 
-<p>You can change the serial port assigned to the FTDI chip. Go to <em>USB Serial Port properties-&gt;Port settings tab-&gt;Advanced</em>, change the COM port in the drop-down box.</p>
+<p>You can change the serial port assigned to the FTDI chip. Go to <em>USB Serial Port properties->Port settings tab->Advanced</em>, change the COM port in the drop-down box.</p>
 <h2><strong>Terminal setup</strong></h2>
 <p>Windows terminal is cranky, but <a href="http://whereisian.com/forum/index.php?topic=4.0">it appears to work</a> with the Bus Pirate when VT100 emulation is enabled. We highly recommend a better terminal, we like <a href="http://www.ayera.com/teraterm/">Tera Term Pro</a> for Windows.</p>
 <p><img class="alignnone size-full wp-image-66" title="tt-setup1" src="http://wherelabs.files.wordpress.com/2009/07/tt-setup1.png?w=291&#038;h=176" alt="tt-setup1" width="291" height="176" /></p>
@@ -109,11 +109,11 @@
 <p style="padding-left:30px;">Output type:<br />
 1. High-Z outputs (H=input, L=GND)<br />
 2. Normal outputs (H=Vcc, L=GND)<br />
-(1) &gt; <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; option 1 is the default</strong></span></p>
+(1) > <span style="text-decoration:underline;"><strong><<< option 1 is the default</strong></span></p>
 
 <p>Press <em>enter</em> to select the default option.</p>
 <p><strong>Bus modes, protocol libraries</strong></p>
-<p style="padding-left:30px;">HiZ&gt;M <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; bus mode menu</strong></span><br />
+<p style="padding-left:30px;">HiZ>M <span style="text-decoration:underline;"><strong><<< bus mode menu</strong></span><br />
 1. HiZ<br />
 2. 1-WIRE<br />
 3. UART<br />
@@ -126,24 +126,24 @@
 9. PC KEYBOARD<br />
 10. MIDI<br />
 11. LCD<br />
-(1) &gt;5 <strong><span style="text-decoration:underline;">&lt;&lt;&lt; enter SPI bus mode</span><br />
+(1) >5 <strong><span style="text-decoration:underline;"><<< enter SPI bus mode</span><br />
 
 </strong></p>
 <p>The ‘bus mode' menu (M) configures the Bus Pirate for a specific protocol, like 1-Wire, I2C, SPI, etc. The default start-up mode is HiZ, all pins are inputs and all power supplies are off.</p>
 <p>Most modes have additional options, like <a href="http://hackaday.com/2009/07/01/mixed-voltage-interfacing-with-the-bus-pirate/">open drain outputs</a> or speed settings. Each bus mode is documented in the <a href="http://dangerousprototypes.com/bus-pirate-manual/">Bus Pirate manual</a><a href="http://www.buspirate.com/"></a>.</p>
 <p style="padding-left:30px;">SPI READY<br />
-SPI&gt;p <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; pull-up configuration menu</strong></span><br />
+SPI>p <span style="text-decoration:underline;"><strong><<< pull-up configuration menu</strong></span><br />
 
 1. Pullup off<br />
 2. Pullup on<br />
-(1) &gt;2 <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; pull-up on</strong></span><br />
+(1) >2 <span style="text-decoration:underline;"><strong><<< pull-up on</strong></span><br />
 PULLUP RESISTORS ON<br />
-SPI&gt;W <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; power supplies ON syntax</strong></span><br />
+SPI>W <span style="text-decoration:underline;"><strong><<< power supplies ON syntax</strong></span><br />
 POWER SUPPLIES ON<br />
 
-SPI&gt;v <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; check power supply output</strong></span><br />
+SPI>v <span style="text-decoration:underline;"><strong><<< check power supply output</strong></span><br />
 VOLTAGE MONITOR: 5V: 4.9 | 3.3V: 3.3 | VPULLUP: 0.0 |<br />
-SPI&gt;</p>
+SPI></p>
 <p>Once a mode is configured, you can enable other options.  Turn on the on-board voltage regulators (capital ‘W') and check the output levels (v). Configure the <a href="http://dangerousprototypes.com/2009/07/27/bus-pirate-practical-guide-to-pull-up-resistors/">pull-up resistors</a> (p).</p>
 
 <h2><strong>Taking it further</strong></h2>
