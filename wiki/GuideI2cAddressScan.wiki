@@ -3,7 +3,7 @@
 <h1>Scan for I2C read and write addresses</h1>
 
 <p><img class="alignnone size-full wp-image-943" title="i2c-scan" src="http://wherelabs.files.wordpress.com/2009/09/i2c-scan.png?w=345&#038;h=221" alt="i2c-scan" width="345" height="221" /></p>
-<p>You can find the <a href="http://en.wikipedia.org/wiki/I%C2%B2C">I2C</a> address for most I2C-compatible chips in the datasheet. But what if you&#8217;re working with an unknown chip, a dated chip with no datasheet, or you&#8217;re just too lazy to look it up?</p>
+<p>You can find the <a href="http://en.wikipedia.org/wiki/I%C2%B2C">I2C</a> address for most I2C-compatible chips in the datasheet. But what if you're working with an unknown chip, a dated chip with no datasheet, or you're just too lazy to look it up?</p>
 <p>The <a href="http://dangerousprototypes.com/bus-pirate-manual/">Bus Pirate</a> has a built-in address scanner that checks every possible I2C address for a response. This brute force method is a fast and easy way to see if any chips are responding, and to uncover undocumented access addresses.</p>
 
 <p><img class="alignright size-full wp-image-944" title="i2c-scan-thumb" src="http://wherelabs.files.wordpress.com/2009/09/i2c-scan-thumb.jpg?w=200&#038;h=128" alt="i2c-scan-thumb" width="200" height="128" />I2C chips respond to a  7bit address, so up to 128 devices can share the same two communication wires. An additional bit of the address determines if the operation is a write to the chip (0), or a read from the chip (1).</p>

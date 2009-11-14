@@ -17,7 +17,7 @@ CONVERT (1) &gt;0xf<br />
 
 0b00001111<br />
 HiZ&gt;</p>
-<p>The latest Bus Pirate nightly firmware compile (v2.1-RC3+) adds a much-needed base conversion command, available in all modes. Press &#8216;=&#8217; and enter any byte value to see the HEX/DEC/BIN equivalent.</p>
+<p>The latest Bus Pirate nightly firmware compile (v2.1-RC3+) adds a much-needed base conversion command, available in all modes. Press &#8216;=' and enter any byte value to see the HEX/DEC/BIN equivalent.</p>
 <p><span id="more-595"></span></p>
 <p style="padding-left:30px;">HiZ&gt;=<br />
 CONVERT (1) &gt;0<br />

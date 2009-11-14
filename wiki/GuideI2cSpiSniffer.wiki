@@ -3,12 +3,12 @@
 <h1>Bus Pirate I2C, SPI sniffer updates</h1>
 
 <p><img class="alignnone size-full wp-image-2121" title="sniffer" src="http://wherelabs.files.wordpress.com/2009/11/sniffer.png?w=329&#038;h=112" alt="sniffer" width="329" height="112" /></p>
-<p>With aphoticjezter&#8217;s <a href="http://dangerousprototypes.com/2009/11/05/bus-pirate-i2c-sniffer-working/">confirmation that the undocumented I2C sniffer actually works</a>, we tweaked the code to help get around the UART speed limitations. These updates are in the latest <a href="http://code.google.com/p/the-bus-pirate/source/browse/#svn/trunk/firmware/">nightly build</a>.</p>
+<p>With aphoticjezter's <a href="http://dangerousprototypes.com/2009/11/05/bus-pirate-i2c-sniffer-working/">confirmation that the undocumented I2C sniffer actually works</a>, we tweaked the code to help get around the UART speed limitations. These updates are in the latest <a href="http://code.google.com/p/the-bus-pirate/source/browse/#svn/trunk/firmware/">nightly build</a>.</p>
 <p>The I2C and SPI sniffers now use a 4096byte output <a href="http://en.wikipedia.org/wiki/Circular_buffer">ring buffer</a>. Sniffer output goes into the ring buffer and gets pushed to the PC when the UART is free. This should eliminate problems with dropped bytes, regardless of UART speed or display mode. A long enough stream of data will eventually overtake the buffer, after which new bytes will be dropped until space is available.</p>
 
 <p>Sniffer demos and documentation after the break.</p>
 <p><span id="more-2119"></span><strong>I2C sniffer</strong></p>
-<p>The I2C sniffer is implemented in software and <em><strong>seems to work up to 70kHz</strong></em>. It&#8217;s still very beta, improvements are probably possible.</p>
+<p>The I2C sniffer is implemented in software and <em><strong>seems to work up to 70kHz</strong></em>. It's still very beta, improvements are probably possible.</p>
 <ul>
 <li>[/]  &#8211; Start/stop bit</li>
 <li>+/-  &#8211; ACK/NACK</li>
@@ -44,4 +44,4 @@ SPI bus sniffer, any key exists<br />
 <p>See <a href="http://dangerousprototypes.com/2009/10/08/bus-pirate-raw-spi-mode/">here</a> for more about the SPI sniffer in SPI binary mode.</p>
 <p><strong>Notes</strong></p>
 <p>Both sniffers use the user input buffer as a ring buffer. Any commands entered after the sniffer macro will be lost.</p>
-<p>If the ring buffer is full, bytes are simply dropped until there&#8217;s free space. The MODE LED turns off if this happens.</p>
+<p>If the ring buffer is full, bytes are simply dropped until there's free space. The MODE LED turns off if this happens.</p>

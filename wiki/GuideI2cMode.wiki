@@ -55,7 +55,7 @@ Found devices at:<br />
 0xD0(0&#215;68W) 0xD1(0&#215;68R)<br />
 I2C&gt;</p>
 
-<p>Here&#8217;s the new address scanner layout. In addition to the raw bus byte addresses (0xd0, 0xd1), the scanner now displays the 7bit I2C (R) and write (W) addresses. It&#8217;ll be easier to  line up the output with a datasheet or logic analyzer, without manually converting the addresses.</p>
+<p>Here's the new address scanner layout. In addition to the raw bus byte addresses (0xd0, 0xd1), the scanner now displays the 7bit I2C (R) and write (W) addresses. It'll be easier to  line up the output with a datasheet or logic analyzer, without manually converting the addresses.</p>
 <p><strong>ACK/NACK management, major bug fix</strong></p>
 <p>These examples read and write from the RAM of a DS1307 RTC chip.</p>
 <p style="padding-left:30px;">I2C&gt; [ 0xd1 rrrr]<br />
@@ -79,7 +79,7 @@ BULK READ 0&#215;05 BYTES:<br />
 
 I2C STOP CONDITION<br />
 I2C&gt;</p>
-<p>Here&#8217;s an example using the bulk read command (r:5).</p>
+<p>Here's an example using the bulk read command (r:5).</p>
 <p style="padding-left:30px;">I2C&gt;[0xd1 r <span style="text-decoration:underline;"><strong>&lt;&lt;&lt;setup and read one byte</strong></span><br />
 I2C START CONDITION<br />
 WRITE: 0xD1 GOT ACK: YES<br />
@@ -101,9 +101,9 @@ I2C&gt;</p>
 
 <p>There were several large bugs in the Bus Pirate I2C library prior to version 2.1, so we thought a debriefing was in order.</p>
 <p><img class="alignnone size-full wp-image-635" title="i2cbug.ii" src="http://wherelabs.files.wordpress.com/2009/08/i2cbug-ii.png?w=470&#038;h=75" alt="i2cbug.ii" width="470" height="75" /></p>
-<p>Prior to firmware v2.1, the Bus Pirate used a GPL I2C library from outside the project. Our implementation of the library always acknowledged byte reads with a low bit called an ACK (top transaction). The I2C specification, however, requires that the final byte read should be &#8216;not acknowledged&#8217; with a high bit called a NACK (bottom transaction). When the slave sees the NACK bit it stops sending data.</p>
-<p>All I2C slave chips are supposed to shut down when they see a STOP condition on the I2C pins. Even though the old firmware ACKed every byte, the STOP signal should shut down the chip anyway. However, if the slave is sending data during a read operation, and the first bit is 0, then it can&#8217;t see the STOP signal because the bus is busy. This is called <a href="http://en.wikipedia.org/wiki/Bus_contention">bus contention</a>.</p>
-<p>There&#8217;s several reasons we didn&#8217;t catch this bug sooner. First, the method outlined above actually works for many chips because of chance bit-order or bus contention detection features. Second, our short demonstrations usually involved a single read operation at their conclusion, so we never saw the problems that were revealed with extended use.</p>
+<p>Prior to firmware v2.1, the Bus Pirate used a GPL I2C library from outside the project. Our implementation of the library always acknowledged byte reads with a low bit called an ACK (top transaction). The I2C specification, however, requires that the final byte read should be &#8216;not acknowledged' with a high bit called a NACK (bottom transaction). When the slave sees the NACK bit it stops sending data.</p>
+<p>All I2C slave chips are supposed to shut down when they see a STOP condition on the I2C pins. Even though the old firmware ACKed every byte, the STOP signal should shut down the chip anyway. However, if the slave is sending data during a read operation, and the first bit is 0, then it can't see the STOP signal because the bus is busy. This is called <a href="http://en.wikipedia.org/wiki/Bus_contention">bus contention</a>.</p>
+<p>There's several reasons we didn't catch this bug sooner. First, the method outlined above actually works for many chips because of chance bit-order or bus contention detection features. Second, our short demonstrations usually involved a single read operation at their conclusion, so we never saw the problems that were revealed with extended use.</p>
 
-<p>The new delayed (N)ACK method should work fine for every chip we&#8217;ve tested or demoed in the past. It might have issues if there&#8217;s protocols that switch reads and writes between START ([) and STOP (]) bits, but we&#8217;re not aware of anything that does this.</p>
-<p>The address scanner ghosting was related to the read NACK problem. When the address scanner sends a read address, some chips go immediately into read mode and create bus contention that prevents us from making the stop condition. That&#8217;s why there&#8217;s sometimes an extra address after the read address during an address search. When we send the read address, the chip clocks out 8bits before it gets a NACK on the final byte.</p>
+<p>The new delayed (N)ACK method should work fine for every chip we've tested or demoed in the past. It might have issues if there's protocols that switch reads and writes between START ([) and STOP (]) bits, but we're not aware of anything that does this.</p>
+<p>The address scanner ghosting was related to the read NACK problem. When the address scanner sends a read address, some chips go immediately into read mode and create bus contention that prevents us from making the stop condition. That's why there's sometimes an extra address after the read address during an address search. When we send the read address, the chip clocks out 8bits before it gets a NACK on the final byte.</p>
