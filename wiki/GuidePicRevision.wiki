@@ -9,10 +9,10 @@
 Hack a Day Bus Pirate v2go<br />
 http://www.buspirate.com<br />
 Firmware v2.1-nightly<br />
-DEVID:0&#215;0447 <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; PIC 24F64GA002</strong></span><br />
-REVID:0&#215;3042 (B4) <span style="text-decoration:underline;"><strong>&lt;&lt;&lt;0&#215;3042 = Revision 4</strong></span><br />
+DEVID:0x0447 <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; PIC 24F64GA002</strong></span><br />
+REVID:0x3042 (B4) <span style="text-decoration:underline;"><strong>&lt;&lt;&lt;0x3042 = Revision 4</strong></span><br />
 CFG1:0xF9DF <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; config word one</strong></span><br />
 
-CFG2:0&#215;3F7F <strong><span style="text-decoration:underline;">&lt;&lt;&lt;config word two</span></strong><br />
+CFG2:0x3F7F <strong><span style="text-decoration:underline;">&lt;&lt;&lt;config word two</span></strong><br />
 HiZ&gt;</p>
-<p>Use the information menu (i) to report the settings. PIC revisions: A3/A4=0&#215;3003, B4=0&#215;3042, B5=0&#215;3043.</p>
+<p>Use the information menu (i) to report the settings. PIC revisions: A3/A4=0x3003, B4=0x3042, B5=0x3043.</p>

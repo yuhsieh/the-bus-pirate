@@ -6,18 +6,18 @@
 <p>Converting between hexadecimal, decimal, and binary is a pretty constant activity when you work with a new microchip.</p>
 <p style="padding-left:30px;">HiZ&gt;=<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;HEX/DEC/BIN converter command</strong></span><br />
 CONVERT (1) &gt;0b1010 <span style="text-decoration:underline;"><strong>&lt;&lt;&lt;convert this value</strong><br />
-</span> 0&#215;0A <span style="text-decoration:underline;"><strong>&lt;&lt;&lt;HEX equivalent</strong></span><br />
+</span> 0x0A <span style="text-decoration:underline;"><strong>&lt;&lt;&lt;HEX equivalent</strong></span><br />
 
 10<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;DEC equivalent</strong></span><br />
 0b00001010<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;BIN equivalent</strong></span><br />
 HiZ&gt;=<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;HEX/DEC/BIN converter command</strong></span><br />
 CONVERT (1) &gt;0xf<br />
-0&#215;0F<br />
+0x0F<br />
 15<br />
 
 0b00001111<br />
 HiZ&gt;</p>
-<p>The latest Bus Pirate nightly firmware compile (v2.1-RC3+) adds a much-needed base conversion command, available in all modes. Press &#8216;=' and enter any byte value to see the HEX/DEC/BIN equivalent.</p>
+<p>The latest Bus Pirate nightly firmware compile (v2.1-RC3+) adds a much-needed base conversion command, available in all modes. Press ‘=' and enter any byte value to see the HEX/DEC/BIN equivalent.</p>
 <p><span id="more-595"></span></p>
 <p style="padding-left:30px;">HiZ&gt;=<br />
 CONVERT (1) &gt;0<br />
@@ -32,7 +32,7 @@ INVALID, TRY AGAIN&gt;</p>
 <td><strong>BIN</strong></td>
 </tr>
 <tr>
-<td>0&#215;00</td>
+<td>0x00</td>
 <td>0</td>
 
 <td>0b00000000</td>

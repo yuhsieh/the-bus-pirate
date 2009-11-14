@@ -12,7 +12,7 @@
 </span>VOLTAGE MONITOR: 5V: 5.0 | 3.3V: 3.3 | VPULLUP: 5.0 |<br />
 I2C&gt;</p>
 
-<p><strong><em>You must connect the Vpullup pin to a voltage.</em></strong> The pull-up resistors aren't hard-wired to a power supply, you can apply any voltage level that's needed (from ground to +5volts). Type &#8216;V' in the Bus Pirate terminal to see the current voltage on the Vpullup pin.</p>
+<p><strong><em>You must connect the Vpullup pin to a voltage.</em></strong> The pull-up resistors aren't hard-wired to a power supply, you can apply any voltage level that's needed (from ground to +5volts). Type ‘V' in the Bus Pirate terminal to see the current voltage on the Vpullup pin.</p>
 <p>When the main microcontroller (IC1) holds the 4066 enable pin at 0volts the pull-up voltage is blocked and nothing goes through the resistors. When the enable pin is high, the pull-up voltage is allowed through the 4066 and the resistors  hold the bus pins at the level of the Vpullup pin.</p>
 <p style="padding-left:30px;">I2C&gt;p <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; pull-up resistor menu</strong></span><br />
 1. Pullup off<br />
@@ -21,5 +21,5 @@ I2C&gt;</p>
 (1) &gt;2 <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; enable pull-up resistors</strong></span><br />
 PULLUP RESISTORS ON<br />
 I2C&gt;</p>
-<p>Use the &#8216;p' menu in the Bus Pirate terminal to configure the pull-up resistors. Option 2 enables the 4066, and the voltage on the Vpullup pin is applied to the 10K pull-up resistors.</p>
+<p>Use the ‘p' menu in the Bus Pirate terminal to configure the pull-up resistors. Option 2 enables the 4066, and the voltage on the Vpullup pin is applied to the 10K pull-up resistors.</p>
 <p>Read more about pull-up resistors and the Bus Pirate's open collector output mode (HiZ) at Hack a Day: <a href="http://hackaday.com/2009/07/01/mixed-voltage-interfacing-with-the-bus-pirate/">Mixed voltage interfacing with the Bus Pirate</a>.</p>

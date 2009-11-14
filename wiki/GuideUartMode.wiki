@@ -7,16 +7,16 @@
 <p>The UART library has been largely neglected since early releases. This post outlines changes in the v2.7 release that  solve a number of issues that were plaguing the UART library, including <a href="http://dangerousprototypes.com/2009/10/07/bus-pirate-major-uart-fix/">speed setting problems</a> and <a href="http://whereisian.com/forum/index.php?topic=102.msg654#msg654">buffer errors</a>.</p>
 <p><span id="more-1705"></span><em>Parity and framing errors</em></p>
 
-<p style="padding-left:30px;">READ: -p -f 0&#215;40 <span style="text-decoration:underline;"><strong>&lt;&lt;&lt;-p -f flag set<br />
+<p style="padding-left:30px;">READ: -p -f 0x40 <span style="text-decoration:underline;"><strong>&lt;&lt;&lt;-p -f flag set<br />
 </strong></span></p>
 <p>The Bus Pirate now reports framing errors (-f) and parity errors (-p) when reading a byte from the UART. It's unlikely you'll see these errors unless the UART speed is mismatched with the sender.</p>
 <p><em>Buffer overrun errors</em></p>
-<p>The Bus Pirate hardware has a four-byte UART buffer that holds data until you read it with an &#8216;r' command, or until it can be printed to the terminal if live display is enabled with &#8216;['. After it fills, new data will be lost. This is called a buffer overrun.</p>
+<p>The Bus Pirate hardware has a four-byte UART buffer that holds data until you read it with an ‘r' command, or until it can be printed to the terminal if live display is enabled with ‘['. After it fills, new data will be lost. This is called a buffer overrun.</p>
 
 <p style="padding-left:30px;">READ: 0x40 *Bytes dropped*<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;bytes dropped error<br />
 </strong></span></p>
 <p>The Bus Pirate now detects buffer errors, clears them, and alerts you of dropped bytes. The overrun bit is cleared any time you use the r, {, or [ commands. If you close the live UART display (]) and more than 5 bytes come in,  the next read command (r) will clear the error and print the *bytes dropped* warning.</p>
-<p>Prevent buffer problems by reducing the amount of data the Bus Pirate transfers over USB for each byte of UART data. Raw display mode reduces the four byte hex value 0&#215;00 to a single raw byte value. A better way is to use macro (1) or (2) to view unformatted UART output, this is a 1:1 transfer of bytes that should work at the highest possible speeds.</p>
+<p>Prevent buffer problems by reducing the amount of data the Bus Pirate transfers over USB for each byte of UART data. Raw display mode reduces the four byte hex value 0×00 to a single raw byte value. A better way is to use macro (1) or (2) to view unformatted UART output, this is a 1:1 transfer of bytes that should work at the highest possible speeds.</p>
 <p><em>Macro additions, changes</em></p>
 <p style="padding-left:30px;">UART&gt;(1)<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;macro 1, transparent UART bridge</strong></span><br />
 UART bridge. Space continues, anything else exits.<br />

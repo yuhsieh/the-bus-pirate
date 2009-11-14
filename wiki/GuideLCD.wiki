@@ -3,7 +3,7 @@
 <h1>Bus Pirate: HD44780 character LCD adapter</h1>
 
 <p><img class="alignnone size-full wp-image-433" title="cover.ii" src="http://wherelabs.files.wordpress.com/2009/08/cover-ii.jpg?w=450&#038;h=229" alt="cover.ii" width="450" height="229" /></p>
-<p>Cheap character LCDs based on the <a href="http://en.wikipedia.org/wiki/HD44780_Character_LCD">HD44780 chipset</a> come in a variety of sizes: 2&#215;16, 4&#215;20, etc. These displays have two standard interface modes, <a href="http://home.iae.nl/users/pouweha/lcd/lcd0.shtml#_8bit-transfer">4bit and 8bit parallel</a>. 8bit requires a total of 11 data lines, 4bit requires 7 (6 for write-only). Some LCDs support an additional serial data mode, like the <a href="http://hackaday.com/2009/07/13/parts-4x20-vfd-character-display-na204sd02/">VFD Ian covered at Hack a Day</a>.</p>
+<p>Cheap character LCDs based on the <a href="http://en.wikipedia.org/wiki/HD44780_Character_LCD">HD44780 chipset</a> come in a variety of sizes: 2x16, 4x20, etc. These displays have two standard interface modes, <a href="http://home.iae.nl/users/pouweha/lcd/lcd0.shtml#_8bit-transfer">4bit and 8bit parallel</a>. 8bit requires a total of 11 data lines, 4bit requires 7 (6 for write-only). Some LCDs support an additional serial data mode, like the <a href="http://hackaday.com/2009/07/13/parts-4x20-vfd-character-display-na204sd02/">VFD Ian covered at Hack a Day</a>.</p>
 
 <p><img class="alignright size-full wp-image-435" title="adapter-mini.225" src="http://wherelabs.files.wordpress.com/2009/08/adapter-mini-225.jpg?w=225&#038;h=132" alt="adapter-mini.225" width="225" height="132" />HD44780 LCDs are generally 5volt parts with a separate supply for the back light. The <a href="http://www.buspirate.com">Bus Pirate</a> only has five 5volt tolerant I/O pins, so we made a small adapter board with enough pins to control the LCD. The Bus Pirate controls the adapter board through its LCD interface library.</p>
 <p>Continue reading about the Bus Pirate HD44780 character LCD adapter board and interface library after the break. We can have PCBs, kits, or assembled kits produced by <a href="http://www.seeedstudio.com/depot/">Seeed Studio</a> for about $15, including worldwide shipping, <a href="http://whereisian.com/forum/index.php?topic=48.0">more here</a>.<span id="more-393"></span></p>
@@ -21,7 +21,7 @@
 <p>The PCF8574 works from 2.5 to 5volts. The I/O pins operate at the supply voltage, so if we feed it 5volts it interfaces the LCD at 5volts.  C1 (0.1uF) decouples the IC from fluctuations in the power supply.</p>
 <p>One pin of the PCF8574 controls a 3mm LED (LED1) through current limiting resistor R2 (1000 ohms). The LED lights to indicate successful communication between the Bus Pirate and the adapter. The PCF8574 can't source enough current to power the LED, so we power the LED from the 5volt supply and switch the ground.</p>
 <p><em>LCD</em></p>
-<p>The adapter board communicates with an HD44780-based character LCD in <a href="http://homepage.hispeed.ch/peterfleury/avr-lcd44780.html">4bit parallel interface mode</a>. The 4bit interface pins &#8211; RS, RW, EN, and D4-D7 &#8211; are connected to seven of the PCF8574 I/O pins. We like to use 0.1&#8243; male pin header to connect the adapter to an LCD, you can usually lean the LCD  against the pins to create sufficient contact for a quick test.</p>
+<p>The adapter board communicates with an HD44780-based character LCD in <a href="http://homepage.hispeed.ch/peterfleury/avr-lcd44780.html">4bit parallel interface mode</a>. The 4bit interface pins – RS, RW, EN, and D4-D7 – are connected to seven of the PCF8574 I/O pins. We like to use 0.1″ male pin header to connect the adapter to an LCD, you can usually lean the LCD  against the pins to create sufficient contact for a quick test.</p>
 
 <p>Trimmer resistor R1 (10K) provides a contrast adjustment voltage to pin 3 of the LCD header.</p>
 <p>We didn't connect the backlight pins because there's so many <a href="http://en.wikipedia.org/wiki/Backlight"> different  backlight styles</a>. Providing power for an LED backlight might damage a screen that requires a negative voltage supply.</p>
@@ -65,7 +65,7 @@
 </tr>
 <tr>
 <td>JP1+JP2</td>
-<td><a href="http://www.mouser.com/Search/ProductDetail.aspx?R=4-103329-0virtualkey57100000virtualkey571-41033290">0.1&#8243; male header, 5 pins</a></td>
+<td><a href="http://www.mouser.com/Search/ProductDetail.aspx?R=4-103329-0virtualkey57100000virtualkey571-41033290">0.1″ male header, 5 pins</a></td>
 <td>1</td>
 </tr>
 <tr>
@@ -123,7 +123,7 @@
 <tr>
 <td>Vpullup</td>
 <td>+5V</td>
-<td>&#8211;</td>
+<td>–</td>
 
 </tr>
 </tbody>
@@ -137,7 +137,7 @@
 <p><span style="text-decoration:underline;">Step 1. Setup library</span></p>
 <p style="padding-left:30px;">HiZ&gt;m<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;set mode menu</strong></span><br />
 1. HiZ<br />
-&#8230;<br />
+…<br />
 11. LCD<br />
 
 12. HWI2C<br />
@@ -149,7 +149,7 @@ LCD type:<br />
 HD44780 LCD TESTER<br />
 
 REQUIRES PCF8574 I2C IO EXPANDER<br />
-LCD&gt;W<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;big &#8216;W' turns on the power supplies</strong></span><br />
+LCD&gt;W<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;big ‘W' turns on the power supplies</strong></span><br />
 POWER SUPPLIES ON<br />
 LCD&gt;p<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;configure the pull-up resistors</strong></span><br />
 1. Pullup off<br />
@@ -161,8 +161,8 @@ LCD&gt;v<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;get voltage
 VOLTAGE MONITOR: 5V: 4.9 | 3.3V: 3.3 | VPULLUP: 5.0<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;check Vpu</strong></span><br />
 LCD&gt;</p>
 
-<p>Press &#8216;m' in the Bus Pirate terminal and choose the LCD library. It currently it only supports HD44780 character LCDs using the PFC8574 adapter described in the first half of this article (option 1).</p>
-<p>Enable the power supplies (big &#8216;W') and pull-up resistors (menu &#8216;p').  Check the voltage monitor (menu &#8216;v') and make sure that the pull-up voltage (Vpullup) reads around 5volts.</p>
+<p>Press ‘m' in the Bus Pirate terminal and choose the LCD library. It currently it only supports HD44780 character LCDs using the PFC8574 adapter described in the first half of this article (option 1).</p>
+<p>Enable the power supplies (big ‘W') and pull-up resistors (menu ‘p').  Check the voltage monitor (menu ‘v') and make sure that the pull-up voltage (Vpullup) reads around 5volts.</p>
 <p><span style="text-decoration:underline;">Step 2. Reset &amp; initialization</span></p>
 
 <p><span style="text-decoration:underline;"><img class="alignnone size-full wp-image-413" title="HD44780 command table" src="http://wherelabs.files.wordpress.com/2009/08/vfd-command-pg27.png?w=470&#038;h=197" alt="HD44780 command table" width="470" height="197" /></span></p>
@@ -200,7 +200,7 @@ LCD&gt;</p>
 </span></p>
 <p style="padding-left:30px;">LCD&gt;(6:80)<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;write 80 numbers </strong></span><br />
 LCD&gt;</p>
-<p>The <em>write numbers</em> macro fills the LCD with test numbers between 0 and 9. The number after the colon tells the Bus Pirate how many test numbers to write, we're using a 4&#215;20LCD, so we write 80 numbers to fill it. Notice that the cursor ends at position 0, under the first &#8216;0&#8242;.</p>
+<p>The <em>write numbers</em> macro fills the LCD with test numbers between 0 and 9. The number after the colon tells the Bus Pirate how many test numbers to write, we're using a 4x20LCD, so we write 80 numbers to fill it. Notice that the cursor ends at position 0, under the first ‘0′.</p>
 
 <p><img class="alignnone size-full wp-image-407" title="chara-test" src="http://wherelabs.files.wordpress.com/2009/08/chara-test.jpg?w=450&#038;h=147" alt="chara-test" width="450" height="147" /></p>
 <p style="padding-left:30px;">LCD&gt;(7:80)<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;write 80 characters</strong></span><br />
@@ -214,7 +214,7 @@ LCD&gt;</p>
 CLEARED<br />
 LCD&gt;</p>
 <p>The <em>clear LCD</em> macro sends the HD44780  command that erases the screen and returns the cursor to the first position.</p>
-<p>You could also do any of these operations without the macros, refer to the command table at the beginning of this section. Enter &#8216;[0b1' in the Bus Pirate to set the interface to command mode ([) and send the HD44780 clear screen command (0b00000001) without a macro.</p>
+<p>You could also do any of these operations without the macros, refer to the command table at the beginning of this section. Enter ‘[0b1' in the Bus Pirate to set the interface to command mode ([) and send the HD44780 clear screen command (0b00000001) without a macro.</p>
 
 <p><span style="text-decoration:underline;">Step 5. Type text</span></p>
 <p><span style="text-decoration:underline;"><img class="alignnone size-full wp-image-408" title="LCD1-text" src="http://wherelabs.files.wordpress.com/2009/08/lcd1-text.jpg?w=450&#038;h=157" alt="LCD1-text" width="450" height="157" /><br />
@@ -255,18 +255,18 @@ LCD&gt;</p>
 <p style="padding-left:30px;">LCD&gt;]rrrrrrr <span style="text-decoration:underline;"><strong>&lt;&lt;&lt;read data memory</strong></span><br />
 
 HD44780 RS HIGH, DATA MODE<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;register select pin high</strong></span><br />
-READ: 0&#215;48<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; &#8216;H'</strong><br />
-</span>READ: 0&#215;44<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; &#8216;D'</strong></span><br />
-READ: 0&#215;34<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; &#8216;4&#8242;</strong></span><br />
+READ: 0x48<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; ‘H'</strong><br />
+</span>READ: 0x44<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; ‘D'</strong></span><br />
+READ: 0x34<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; ‘4′</strong></span><br />
 
-READ: 0&#215;34<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; &#8216;4&#8242;</strong></span><br />
-READ: 0&#215;37<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; &#8216;7&#8242;</strong></span><br />
-READ: 0&#215;38<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; &#8216;8&#8242;</strong></span><br />
-READ: 0&#215;30<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; &#8216;0&#8242;</strong></span><br />
+READ: 0x34<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; ‘4′</strong></span><br />
+READ: 0x37<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; ‘7′</strong></span><br />
+READ: 0x38<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; ‘8′</strong></span><br />
+READ: 0x30<span style="text-decoration:underline;"><strong>&lt;&lt;&lt; ‘0′</strong></span><br />
 
 LCD&gt;</p>
-<p>Finally, tell the Bus Pirate to read from data memory (]), and then read a few bytes (rrrrrrr). We got &#8220;HD44780&#8243;, the text we wrote to the screen in step 5.</p>
-<p>You should also be able to use the shortcut r:7 to read seven bytes, but it's not working in the current firmware &#8211; we'll fix this prior to the next release.</p>
+<p>Finally, tell the Bus Pirate to read from data memory (]), and then read a few bytes (rrrrrrr). We got “HD44780″, the text we wrote to the screen in step 5.</p>
+<p>You should also be able to use the shortcut r:7 to read seven bytes, but it's not working in the current firmware – we'll fix this prior to the next release.</p>
 <p><strong>Doing more<br />
 </strong></p>
 <p>The HD44780 character LCD adapter is a handy accessory for the Bus Pirate. It can be used for a quick test, or more advanced logic development.</p>

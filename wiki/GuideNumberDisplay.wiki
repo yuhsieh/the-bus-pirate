@@ -7,17 +7,17 @@
 <p><span id="more-501"></span></p>
 <p>The maximum value you can enter in any format is currently 255 (8bits/1byte).</p>
 
-<p style="padding-left:30px;">0&#215;0, 0&#215;18, 0&#215;4A, 0xFF</p>
-<p><a href="http://en.wikipedia.org/wiki/Hexadecimal">Hexadecimal</a> values are base 16 numbers that use a-f for the numbers 10-15, this format is very common in computers and electronics. Enter HEX values as shown above, precede the value with 0x or 0h. Single digit numbers don't need 0 padding, 0&#215;01 and 0&#215;1 are interpreted the same.</p>
+<p style="padding-left:30px;">0x0, 0x18, 0x4A, 0xFF</p>
+<p><a href="http://en.wikipedia.org/wiki/Hexadecimal">Hexadecimal</a> values are base 16 numbers that use a-f for the numbers 10-15, this format is very common in computers and electronics. Enter HEX values as shown above, precede the value with 0x or 0h. Single digit numbers don't need 0 padding, 0x01 and 0x1 are interpreted the same.</p>
 <p style="padding-left:30px;">0, 24, 74, 255</p>
 <p><a href="http://en.wikipedia.org/wiki/Decimal">Decimal</a> values are common base 10 numbers. Just enter the value, no special designator is required.</p>
 
 <p style="padding-left:30px;">0b0, 0b11000, 0b1001010, 0b11111111</p>
 <p><a href="http://en.wikipedia.org/wiki/Binary_numeral_system">Binary</a> values are commonly used in electronics because the 1's and 0's correspond to register 'switches' that control various aspects of a device. Enter a binary number as 0b and then the bits. Padding 0's are not required, 0b00000001=0b1.</p>
 <p style="padding-left:30px;">HiZ&gt;=<br />
-CONVERT (1) &gt;0&#215;45<br />
+CONVERT (1) &gt;0x45<br />
 
-0&#215;45<br />
+0x45<br />
 69<br />
 0b01000101<br />
 HiZ&gt;</p>

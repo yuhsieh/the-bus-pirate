@@ -16,7 +16,7 @@
 <ol>
 <li>Disconnect any devices from the Bus Pirate I/O header pins. An external device will interfere with the test, and could be damaged by the voltages used (+5volts) on some pins.</li>
 <li>Make the self-test connections shown in the figure above. Connect the Vpullup (Vpu) pin to the +5V pin. Connect the ADC pin to the +3.3V pin.</li>
-<li>To begin the self test, type &#8216;~' followed by <em>enter</em> in the terminal. Self-test is available in HiZ mode only.</li>
+<li>To begin the self test, type ‘~' followed by <em>enter</em> in the terminal. Self-test is available in HiZ mode only.</li>
 <li>You will be reminded to make the self-test connections and remove any external devices. Press any key to run the self-test.</li>
 </ol>
 <p>Here's the output from a self-test:</p>
@@ -29,30 +29,30 @@ These results are experimental.<br />
 Press any key to continue. <span style="text-decoration:underline;"><strong>&lt;&lt;&lt; follow the instructions to begin</strong></span><br />
 
 Starting test.<br />
-Control pin test&#8230;<br />
+Control pin test…<br />
 AUX PIN OK<br />
 MODE LED PIN OK<br />
 PULLUP PIN H OK<br />
 PULLUP PIN L OK<br />
 VREG PIN OK<br />
-Analog pin and power supply test&#8230;<br />
+Analog pin and power supply test…<br />
 5V(5.0) OK<br />
 
 VPULLUP(5.0) OK<br />
 3.3V(3.3) OK<br />
 ADC(3.3) OK<br />
-Bus pins, normal, high&#8230;<br />
+Bus pins, normal, high…<br />
 MOSI PIN OK<br />
 CLK PIN OK<br />
 MISO PIN OK<br />
 CS PIN OK<br />
-Bus pins, open collector, low&#8230;<br />
+Bus pins, open collector, low…<br />
 
 MOSI PIN OK<br />
 CLK PIN OK<br />
 MISO PIN OK<br />
 CS PIN OK<br />
-Bus pins, open collector, high&#8230;<br />
+Bus pins, open collector, high…<br />
 MOSI PIN OK<br />
 CLK PIN OK<br />
 MISO PIN OK<br />
@@ -78,7 +78,7 @@ HiZ&gt;</p>
 <li>Open collector high failures could indicate a problem with the on-board pull-up resistors, or you forgot to connect the 5volt and Vpullup pins. Check R19, R20-R23, IC3.</li>
 <li>Other errors could be a soldering defect or broken microcontroller.</li>
 </ul>
-<p><strong>If your Bus Pirate fails the self-test&#8230;</strong></p>
+<p><strong>If your Bus Pirate fails the self-test…</strong></p>
 
 <ul>
 <li>Make sure that no device is connected to any of the pins</li>

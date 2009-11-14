@@ -12,10 +12,10 @@
 </strong></p>
 <p style="padding-left:30px;">HiZ&gt;m<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;open the mode menu</strong></span><br />
 1. HiZ<br />
-&#8230;<br />
+…<br />
 4. I2C<br />
 
-&#8230;<br />
+…<br />
 (1) &gt;4<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;choose I2C mode</strong></span><br />
 MODE SET<br />
 I2C mode:<br />
@@ -52,7 +52,7 @@ I2C&gt;</p>
 <p style="padding-left:30px;">I2C&gt;(1)<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;search for I2C addresses</strong></span><br />
 Searching 7bit I2C address space.<br />
 Found devices at:<br />
-0xD0(0&#215;68W) 0xD1(0&#215;68R)<br />
+0xD0(0x68W) 0xD1(0x68R)<br />
 I2C&gt;</p>
 
 <p>Here's the new address scanner layout. In addition to the raw bus byte addresses (0xd0, 0xd1), the scanner now displays the 7bit I2C (R) and write (W) addresses. It'll be easier to  line up the output with a datasheet or logic analyzer, without manually converting the addresses.</p>
@@ -62,7 +62,7 @@ I2C&gt;</p>
 I2C START CONDITION<br />
 WRITE: 0xD1 GOT ACK: YES<span style="text-decoration:underline;"><strong>&lt;&lt;&lt;read address</strong></span><br />
 
-READ: 0&#215;07 ACK <span style="text-decoration:underline;"><strong>&lt;&lt;&lt;sent ACK</strong>[</span><br />
+READ: 0x07 ACK <span style="text-decoration:underline;"><strong>&lt;&lt;&lt;sent ACK</strong>[</span><br />
 READ: 0x06 ACK<br />
 READ: 0x05 ACK<br />
 READ: 0x04 NACK <span style="text-decoration:underline;"><strong>&lt;&lt;&lt;last read before STOP,  sent NACK</strong></span><br />
@@ -74,8 +74,8 @@ I2C&gt;</p>
 <p style="padding-left:30px;">I2C&gt; [0xd1 r:5]<br />
 I2C START CONDITION<br />
 WRITE: 0xD1 GOT ACK: YES<br />
-BULK READ 0&#215;05 BYTES:<br />
-0&#215;07 ACK 0&#215;06 ACK 0&#215;05 ACK 0&#215;04 ACK 0&#215;03 NACK<br />
+BULK READ 0x05 BYTES:<br />
+0x07 ACK 0x06 ACK 0x05 ACK 0x04 ACK 0x03 NACK<br />
 
 I2C STOP CONDITION<br />
 I2C&gt;</p>
@@ -94,14 +94,14 @@ NACK <strong><span style="text-decoration:underline;">&lt;&lt;&lt;next command i
 </span></strong> I2C STOP CONDITION<br />
 I2C&gt;</p>
 <p>A consequence of the delayed ACK/NACK system is that partial transactions will leave read operations incomplete.</p>
-<p>Here, we setup a read operation ([0xd1) and read a byte (r). Since the Bus Pirate has no way of knowing  if the next operation will be another read (r) or a stop condition (]), it leaves the ninth bit hanging. The warning &#8220;*(N)ACK PENDING&#8221; alerts you to this state.</p>
+<p>Here, we setup a read operation ([0xd1) and read a byte (r). Since the Bus Pirate has no way of knowing  if the next operation will be another read (r) or a stop condition (]), it leaves the ninth bit hanging. The warning “*(N)ACK PENDING” alerts you to this state.</p>
 <p>Our next command is another read (r), so the Bus Pirate ACKs the previous read and gets another byte. Again, it leaves the (N)ACK bit pending until the next command.</p>
 <p>The final command is STOP (]). The Bus Pirate ends the read with a NACK and then sends the stop condition.</p>
 <p><strong>Incident analysis</strong></p>
 
 <p>There were several large bugs in the Bus Pirate I2C library prior to version 2.1, so we thought a debriefing was in order.</p>
 <p><img class="alignnone size-full wp-image-635" title="i2cbug.ii" src="http://wherelabs.files.wordpress.com/2009/08/i2cbug-ii.png?w=470&#038;h=75" alt="i2cbug.ii" width="470" height="75" /></p>
-<p>Prior to firmware v2.1, the Bus Pirate used a GPL I2C library from outside the project. Our implementation of the library always acknowledged byte reads with a low bit called an ACK (top transaction). The I2C specification, however, requires that the final byte read should be &#8216;not acknowledged' with a high bit called a NACK (bottom transaction). When the slave sees the NACK bit it stops sending data.</p>
+<p>Prior to firmware v2.1, the Bus Pirate used a GPL I2C library from outside the project. Our implementation of the library always acknowledged byte reads with a low bit called an ACK (top transaction). The I2C specification, however, requires that the final byte read should be ‘not acknowledged' with a high bit called a NACK (bottom transaction). When the slave sees the NACK bit it stops sending data.</p>
 <p>All I2C slave chips are supposed to shut down when they see a STOP condition on the I2C pins. Even though the old firmware ACKed every byte, the STOP signal should shut down the chip anyway. However, if the slave is sending data during a read operation, and the first bit is 0, then it can't see the STOP signal because the bus is busy. This is called <a href="http://en.wikipedia.org/wiki/Bus_contention">bus contention</a>.</p>
 <p>There's several reasons we didn't catch this bug sooner. First, the method outlined above actually works for many chips because of chance bit-order or bus contention detection features. Second, our short demonstrations usually involved a single read operation at their conclusion, so we never saw the problems that were revealed with extended use.</p>
 

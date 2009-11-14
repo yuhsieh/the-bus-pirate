@@ -10,8 +10,8 @@
 <p><span id="more-2119"></span><strong>I2C sniffer</strong></p>
 <p>The I2C sniffer is implemented in software and <em><strong>seems to work up to 70kHz</strong></em>. It's still very beta, improvements are probably possible.</p>
 <ul>
-<li>[/]  &#8211; Start/stop bit</li>
-<li>+/-  &#8211; ACK/NACK</li>
+<li>[/]  – Start/stop bit</li>
+<li>+/-  – ACK/NACK</li>
 
 </ul>
 <p>I2C start and stop bits are represented by the normal Bus Pirate syntax.</p>
@@ -25,9 +25,9 @@ I2C&gt;</p>
 <p><strong>SPI sniffer</strong></p>
 <p>The SPI sniffer is implemented in hardware and should work up to 10MHz. It follows the configuration settings you entered for SPI mode.</p>
 <ul>
-<li>[/]  &#8211; CS enable/disable</li>
-<li>0xXX &#8211; MOSI read</li>
-<li>(0xXX)  &#8211; MISO read</li>
+<li>[/]  – CS enable/disable</li>
+<li>0xXX – MOSI read</li>
+<li>(0xXX)  – MISO read</li>
 
 </ul>
 <p>SPI CS pin transitions are represented by the normal Bus Pirate syntax. The byte sniffed on the MISO pin is displayed inside ().</p>
