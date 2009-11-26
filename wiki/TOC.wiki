@@ -30,15 +30,16 @@
   * [FirmwareHighSpeedPIC Fast upgrades if you have a ’slow’ PIC chip]
   * [FirmwareCompile Compile the Bus Pirate firmware]
   * [FirmwareTranslations Bus Pirate Spanish, Italian translations]
- 
- 
-* Hardware Documentation
-  * USB Bus Pirates
-    * [HWBPv3 Bus Pirate BPv3]
-    * [http://hackaday.com/2009/06/25/how-to-the-bus-pirate-v2-with-usb/ Bus Pirate v2a and v2go]
-  * Serial port Bus Pirates
-    * [http://hackaday.com/2009/01/22/how-to-bus-pirate-v1-improved-universal-serial-interface/ v1a]
-    * [http://hackaday.com/2008/11/19/how-to-the-bus-pirate-universal-serial-interface/ v0a]
+  *
+
+
+* USB Bus Pirates Hardware Documentation
+  * [HWBPv3 Bus Pirate BPv3]
+  * [http://hackaday.com/2009/06/25/how-to-the-bus-pirate-v2-with-usb/ Bus Pirate v2a and v2go]
+* Serial port Bus Pirates Hardware Documentation
+  * [http://hackaday.com/2009/01/22/how-to-bus-pirate-v1-improved-universal-serial-interface/ v1a]
+  * [http://hackaday.com/2008/11/19/how-to-the-bus-pirate-universal-serial-interface/ v0a]
+* Other Hardware Documentation 
   * [http://hackaday.com/2009/07/02/how-to-bus-pirate-probe-cable/ Probe cable]
   * [http://code.google.com/p/the-bus-pirate/source/checkout Source code]
   * [HWMOSIPullupMod 2K ohm MOSI pull-up resistor mod]
