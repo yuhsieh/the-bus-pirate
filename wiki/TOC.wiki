@@ -3,6 +3,7 @@
  * [BusPirate102 Bus Pirate 102 tutorial]
  * [ConnectingWithMAC Connecting with MAC OSX]
  * [http://whereisian.com/forum/index.php?board=4.0 Bus Pirate Forum]
+ 
 
 * Guides
  * [GuideSelfTest Self-test guide]
@@ -23,6 +24,22 @@
 * Firmware upgrades
  * [FirmwareUpgradeWindows Firmware upgrade guide for Windows]
  * [FirmwareUpgradePython Fimrware upgrade guide for Linux,OSX (Python)]
+ * [FirmwareUpgradeOSX Detailed OSX upgrade guide]
+ * [FirmwareHighSpeed Faster firmware updates]
+ * [FirmwareHighSpeedPIC Fast upgrades if you have a ’slow’ PIC chip]
+ * [FirmwareCompile Compile the Bus Pirate firmware]
+ * [FirmwareTranslations Bus Pirate Spanish, Italian translations]
+ 
+* Hardware Documentation
+ * USB Bus Pirates
+   * [HWBPv3 Bus Pirate BPv3]
+   * [http://hackaday.com/2009/06/25/how-to-the-bus-pirate-v2-with-usb/ Bus Pirate v2a and v2go]
+ * Serial port Bus Pirates
+  * [http://hackaday.com/2009/01/22/how-to-bus-pirate-v1-improved-universal-serial-interface/ v1a]
+  * [http://hackaday.com/2008/11/19/how-to-the-bus-pirate-universal-serial-interface/ v0a]
+ * [http://hackaday.com/2009/07/02/how-to-bus-pirate-probe-cable/ Probe cable]
+ * [http://code.google.com/p/the-bus-pirate/source/checkout Source code]
+ * [HWMOSIPullupMod 2K ohm MOSI pull-up resistor mod]
  
 * Reference
  * [IOHeaderPinDescriptions I/O header pin descriptions]
