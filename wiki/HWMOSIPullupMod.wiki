@@ -3,7 +3,8 @@
 <h1>Bus Pirate: 2K pull-up resistor mod</h1>
 
 
-<p><span style='text-align:center; display: block;'><object width='425' height='350'><param name='movie' value='http://www.youtube.com/v/A4I9bhVSn2g&#038;rel=1&#038;fs=1&#038;showsearch=0&#038;hd=0' /> <param name='allowfullscreen' value='true' /> <param name='wmode' value='transparent' /> <embed src='http://www.youtube.com/v/A4I9bhVSn2g&#038;rel=1&#038;fs=1&#038;showsearch=0&#038;hd=0' type='application/x-shockwave-flash' allowfullscreen='true' width='425' height='350' wmode='transparent'></embed> </object></span></p>
+<wiki:video url="http://www.youtube.com/watch?v=A4I9bhVSn2g" />
+
 <p>The <a href="http://code.google.com/p/the-bus-pirate/">Bus Pirate</a> v2go shipped with 10K ohm <a href="http://en.wikipedia.org/wiki/Pull-up_resistor">pull-up resistors</a> (R20-23). We modded our Bus Pirate with a 2K pull-up resistor so we don't need an external resistor to work with 1-Wire devices. Pull-up resistors larger than 2.2K ohms don't provide enough current for parasitically powered 1-Wire parts. Since we only need the bigger resistor for the 1-Wire protocol, we only replaced the pull-up resistor on the MOSI pin (R23).</p>
 
 <p>Read more about our mod after the break.</p>
