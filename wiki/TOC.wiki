@@ -21,14 +21,16 @@
  * [GuideI2cSpiSniffer I2C, SPI sniffers]
  * [http://wiki.countercaster.com/The_Bus_Pirate_on_Linux:_From_/dev/ttyUSB?_to_/dev/bus_pirate Create /dev/bus_pirate on Linux]
  
+ 
 * Firmware upgrades
- * [FirmwareUpgradeWindows Firmware upgrade guide for Windows]
- * [FirmwareUpgradePython Fimrware upgrade guide for Linux,OSX (Python)]
- * [FirmwareUpgradeOSX Detailed OSX upgrade guide]
- * [FirmwareHighSpeed Faster firmware updates]
- * [FirmwareHighSpeedPIC Fast upgrades if you have a ’slow’ PIC chip]
- * [FirmwareCompile Compile the Bus Pirate firmware]
- * [FirmwareTranslations Bus Pirate Spanish, Italian translations]
+  * [FirmwareUpgradeWindows Firmware upgrade guide for Windows]
+  * [FirmwareUpgradePython Fimrware upgrade guide for Linux,OSX (Python)]
+  * [FirmwareUpgradeOSX Detailed OSX upgrade guide]
+  * [FirmwareHighSpeed Faster firmware updates]
+  * [FirmwareHighSpeedPIC Fast upgrades if you have a ’slow’ PIC chip]
+  * [FirmwareCompile Compile the Bus Pirate firmware]
+  * [FirmwareTranslations Bus Pirate Spanish, Italian translations]
+ 
  
 * Hardware Documentation
 * USB Bus Pirates
