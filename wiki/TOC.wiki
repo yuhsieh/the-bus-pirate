@@ -18,9 +18,8 @@
  * [GuideNumberBaseConverter HEX/DEC/BIN converter]
  * [GuideNumberDisplay HEX/DEC/BIN number entry and output display]
  * [GuideRepeatCommand Repeat command]
- * [GuideI2cSpiSniffer I2C, SPI sniffers]
  * [http://wiki.countercaster.com/The_Bus_Pirate_on_Linux:_From_/dev/ttyUSB?_to_/dev/bus_pirate Create /dev/bus_pirate on Linux]
- 
+ * [GuideI2cSpiSniffer I2C, SPI sniffers]
  
 * Firmware upgrades
   * [FirmwareUpgradeWindows Firmware upgrade guide for Windows]
