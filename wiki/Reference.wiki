@@ -160,7 +160,7 @@ HiZ></p>
 </tr>
 </tbody>
 </table>
-<p>Menu options are single character commands that configure the Bus Pirate. Type a letter, followed by '<enter>', to access the menu. Some options are unavailable in some modes and on some hardware.</p>
+<p>Menu options are single character commands that configure the Bus Pirate. Type a letter, followed by {{{<enter>}}}, to access the menu. Some options are unavailable in some modes and on some hardware.</p>
 <p><a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-menu-options-guide/">Menu options guide</a>.</p>
 <p><a name="syntax"> </a><br />
 <strong>Syntax and macros</strong></p>
@@ -266,5 +266,3 @@ I2C>(1)</p>
 <strong>Bus Modes</strong></p>
 <p>The Bus Pirate always starts in <a href="http://en.wikipedia.org/wiki/High_impedance">high impedance</a> mode (Hi-Z), a safe mode with all outputs disabled. It's intended to protect any connected devices from conditions beyond their specifications. Each bus mode is described on the pages below.</p>
 <p>Go to: <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-1-wire-guide/">1-Wire</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-uart-guide/">UART</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/i2c-guide/">I2C</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-spi-guide/">SPI</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-jtag-guide/">JTAG</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-raw2wire-guide/">raw 2-wire</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-raw-3-wire-guide/">raw 3-wire</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-keyboard-guide/">PC keyboard</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-hd44780-lcd-library/">HD44780 LCDs</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-uart-guide/">MIDI</a>.<a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-hd44780-lcd-library/"></a><em> </em></p>
-
-
