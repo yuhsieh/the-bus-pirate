@@ -9,12 +9,12 @@
 </em></p>
 <p><img class="alignnone size-full wp-image-331" title="mode-guide" src="http://wherelabs.files.wordpress.com/2009/08/mode-guide.png?w=450&#038;h=152" alt="mode-guide" width="450" height="152" /></p>
 <p>The Bus Pirate I/O pins try to be consistent across all libraries, the same pins are used for similar functions. Unused pins are usually  in a safe high-impedance state. Modes not shown in the above diagram are similar to other libraries: MIDI=UART; raw2wire=HD44780=PC keyboard=I2C; raw3wire=SPI. All bus pins output at 3.3volts, but tolerate up to 5volts (5.5volts maximum).</p>
-<p><em>Master-out slave-in</em> (MOSI) is the primary data pin, it&#8217;s used for bi-directional data transfer in protocols like I2C and 1-Wire, and as data-out from the Bus Pirate in uni-directional protocols like SPI and asynchronous serial (UART).</p>
+<p><em>Master-out slave-in</em> (MOSI) is the primary data pin, it's used for bi-directional data transfer in protocols like I2C and 1-Wire, and as data-out from the Bus Pirate in uni-directional protocols like SPI and asynchronous serial (UART).</p>
 <p><em>Clock</em> is always a clock-out signal from the Bus Pirate, except in the PC keyboard library where the keyboard provides a clock signal <span style="text-decoration:underline;">to</span> the Bus Pirate.</p>
 
 <p><em>Master-in slave-out</em> (MISO) is used with protocols that have a dedicated data-input, such as SPI and UART.</p>
 <p><em>Chip select</em> (CS) is an output used to activate the serial interface in SPI-like protocols. <em>Use the auxiliary pin config menu (c) to get manual control of the CS pin through the auxiliary pin commands (a, A, @).</em></p>
-<p>The <em>auxiliary</em> pin (AUX) can be used as an output or input from the Bus Pirate terminal interface with the A, a, and @ commands. It&#8217;s useful for protocols that require an additional signal, such as a reset.</p>
+<p>The <em>auxiliary</em> pin (AUX) can be used as an output or input from the Bus Pirate terminal interface with the A, a, and @ commands. It's useful for protocols that require an additional signal, such as a reset.</p>
 <p><img class="alignnone size-full wp-image-2240" title="BPv3v2go-pinout" src="http://wherelabs.files.wordpress.com/2009/07/bpv3v2go-pinout.png?w=430&#038;h=265" alt="BPv3v2go-pinout" width="430" height="265" /></p>
 <table border="0">
 
@@ -75,16 +75,16 @@
 </strong></p>
 <p>Talk to the Bus Pirate from a serial terminal set to 115200bps, 8/N/1.</p>
 <p style="padding-left:30px;">* Syntax error, type ? for help<br />
-HiZ&gt;</p>
+HiZ></p>
 <p>Press enter to show the command prompt if your terminal is blank.</p>
-<p style="padding-left:30px;">HiZ&gt;m <strong>&lt;&lt;&lt;set mode command</strong><br />
+<p style="padding-left:30px;">HiZ>m <strong><<<set mode command</strong><br />
 
 1. HiZ<br />
-&#8230;<br />
+...<br />
 10. LCD<br />
-(1) &gt;<strong>&lt;&lt;&lt;press enter to select default option (1)</strong><br />
+(1) ><strong><<<press enter to select default option (1)</strong><br />
 Mode selected<br />
-HiZ&gt;</p>
+HiZ></p>
 <p>Most configuration and option prompts have a default value shown in (). Press enter to select the default option.</p>
 <p>Read more in the <a href="http://dangerousprototypes.com/2009/07/23/bus-pirate-101/">Bus Pirate 101 tutorial</a>.<br />
 
@@ -160,7 +160,7 @@ HiZ&gt;</p>
 </tr>
 </tbody>
 </table>
-<p>Menu options are single character commands that configure the Bus Pirate. Type a letter, followed by &lt;enter&gt;, to access the menu. Some options are unavailable in some modes and on some hardware.</p>
+<p>Menu options are single character commands that configure the Bus Pirate. Type a letter, followed by <enter>, to access the menu. Some options are unavailable in some modes and on some hardware.</p>
 <p><a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-menu-options-guide/">Menu options guide</a>.</p>
 <p><a name="syntax"> </a><br />
 <strong>Syntax and macros</strong></p>
@@ -215,9 +215,9 @@ HiZ&gt;</p>
 <td>Value delimiter. Use a coma or space to separate numbers. Any combination is fine, no delimiter is required between non-number values: {0xa6,0, 0 16 5 0b111 0haF}.</td>
 </tr>
 <tr>
-<td>&amp;</td>
+<td>&</td>
 
-<td>Delay 1uS. (&amp;:1…255 for multiple delays)</td>
+<td>Delay 1uS. (&:1…255 for multiple delays)</td>
 </tr>
 <tr>
 <td>(#)</td>
@@ -251,20 +251,20 @@ HiZ&gt;</p>
 </tr>
 </tbody>
 </table>
-<p>A simple syntax is used to interact with chips. Syntax characters have the same general function in each bus mode, such as &#8216;R&#8217; to read a byte of data.</p>
+<p>A simple syntax is used to interact with chips. Syntax characters have the same general function in each bus mode, such as 'R' to read a byte of data.</p>
 <p style="padding-left:30px;">[ 0x31 r:5]</p>
 
-<p>This example syntax sends a bus start , the value 0&#215;31, and then reads 5 bytes, followed by bus stop. Up to 4000 characters of syntax may be entered into the Bus Pirate terminal at once, press enter to execute the syntax.</p>
-<p style="padding-left:30px;">I2C&gt;(0)<br />
+<p>This example syntax sends a bus start , the value 0x31, and then reads 5 bytes, followed by bus stop. Up to 4000 characters of syntax may be entered into the Bus Pirate terminal at once, press enter to execute the syntax.</p>
+<p style="padding-left:30px;">I2C>(0)<br />
 0.Macro menu<br />
 1.7bit address search<br />
 2.I2C sniffer<br />
-I2C&gt;(1)</p>
+I2C>(1)</p>
 <p>Macros perform complex actions, like scanning for I2C addresses, interrogating a smart card, or probing a JTAG chain. Macros are numbers entered inside (). Macro (0) always displays a list of macros available in the current bus mode.</p>
 
 <p><a name="busmodes"> </a><br />
 <strong>Bus Modes</strong></p>
-<p>The Bus Pirate always starts in <a href="http://en.wikipedia.org/wiki/High_impedance">high impedance</a> mode (Hi-Z), a safe mode with all outputs disabled. It&#8217;s intended to protect any connected devices from conditions beyond their specifications. Each bus mode is described on the pages below.</p>
+<p>The Bus Pirate always starts in <a href="http://en.wikipedia.org/wiki/High_impedance">high impedance</a> mode (Hi-Z), a safe mode with all outputs disabled. It's intended to protect any connected devices from conditions beyond their specifications. Each bus mode is described on the pages below.</p>
 <p>Go to: <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-1-wire-guide/">1-Wire</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-uart-guide/">UART</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/i2c-guide/">I2C</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-spi-guide/">SPI</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-jtag-guide/">JTAG</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-raw2wire-guide/">raw 2-wire</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-raw-3-wire-guide/">raw 3-wire</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-keyboard-guide/">PC keyboard</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-hd44780-lcd-library/">HD44780 LCDs</a>, <a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-uart-guide/">MIDI</a>.<a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-hd44780-lcd-library/"></a><em> </em></p>
 
 
