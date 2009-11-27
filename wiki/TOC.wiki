@@ -21,6 +21,8 @@
  * [GuideRepeatCommand Repeat command]
  * [http://wiki.countercaster.com/The_Bus_Pirate_on_Linux:_From_/dev/ttyUSB?_to_/dev/bus_pirate Create /dev/bus_pirate on Linux]
  * [GuideI2cSpiSniffer I2C, SPI sniffers]
+ * [GuideLogicAnalyzerMode Logic Analyzer Mode]
+ * [GuideSTK500 STK500 v2 AVR programmer clone]
  
 * Firmware upgrades
  * [FirmwareUpgradeWindows Firmware upgrade guide for Windows]
@@ -62,4 +64,4 @@
    * [BSMRawWire Raw-wire]
    * [BSMSelfTest self-test]
    * [http://code.google.com/p/the-bus-pirate/source/browse/#svn/trunk/scripts Example Scripts]
- * [LogicAnalyzerMode Logic Analyzer Mode]
+ 
