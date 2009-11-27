@@ -160,7 +160,7 @@ HiZ></p>
 </tr>
 </tbody>
 </table>
-<p>Menu options are single character commands that configure the Bus Pirate. Type a letter, followed by <enter>, to access the menu. Some options are unavailable in some modes and on some hardware.</p>
+<p>Menu options are single character commands that configure the Bus Pirate. Type a letter, followed by '<enter>', to access the menu. Some options are unavailable in some modes and on some hardware.</p>
 <p><a href="http://dangerousprototypes.com/bus-pirate-manual/bus-pirate-menu-options-guide/">Menu options guide</a>.</p>
 <p><a name="syntax"> </a><br />
 <strong>Syntax and macros</strong></p>
