@@ -23,13 +23,13 @@
  * [GuideI2cSpiSniffer I2C, SPI sniffers]
  
 * Firmware upgrades
-  * [FirmwareUpgradeWindows Firmware upgrade guide for Windows]
-  * [FirmwareUpgradePython Fimrware upgrade guide for Linux,OSX (Python)]
-  * [FirmwareUpgradeOSX Detailed OSX upgrade guide]
-  * [FirmwareHighSpeed Faster firmware updates]
-  * [FirmwareHighSpeedPIC Fast upgrades if you have a ’slow’ PIC chip]
-  * [FirmwareCompile Compile the Bus Pirate firmware]
-  * [FirmwareTranslations Bus Pirate Spanish, Italian translations]
+ * [FirmwareUpgradeWindows Firmware upgrade guide for Windows]
+ * [FirmwareUpgradePython Fimrware upgrade guide for Linux,OSX (Python)]
+ * [FirmwareUpgradeOSX Detailed OSX upgrade guide]
+ * [FirmwareHighSpeed Faster firmware updates]
+ * [FirmwareHighSpeedPIC Fast upgrades if you have a ’slow’ PIC chip]
+ * [FirmwareCompile Compile the Bus Pirate firmware]
+ * [FirmwareTranslations Bus Pirate Spanish, Italian translations]
 
 * USB Bus Pirates Hardware Documentation
   * [HWBPv3 BPv3]
