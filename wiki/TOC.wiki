@@ -61,5 +61,5 @@
    * [BSM1Wire 1-Wire]
    * [BSMRawWire Raw-wire]
    * [BSMSelfTest self-test]
-   * [BSMExampleScripts Example Scripts]
+   * [http://code.google.com/p/the-bus-pirate/source/browse/#svn/trunk/scripts Example Scripts]
  * [LogicAnalyzerMode Logic Analyzer Mode]
