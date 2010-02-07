@@ -32,6 +32,7 @@
 #define CLK 	0b100000000    //RB8
 #define MISO 	0b10000000 //RB7
 #define CS 		0b1000000 //RB6
+#define AUX		0b100000 //RB6
 #define IOPOR 	PORTB
 #define IOLAT	LATB
 #define IODIR	TRISB

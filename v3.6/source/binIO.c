@@ -151,7 +151,7 @@ void binBB(void){
 				BP_AUX_RPOUT = 0;	 //remove output from AUX pin
 				UART1TX(1);
 			//ADC only for v1, v2, v3
-			#ifndef BUSPIRATEV0
+			#ifndef BUSPIRATEV0A
 				}else if(inByte == 0b10100){//ADC reading (x/1024)*6.6volts
 					AD1CON1bits.ADON = 1; // turn ADC ON
 					i=bpADC(12); //take measurement
